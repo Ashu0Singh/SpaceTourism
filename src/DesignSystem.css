@@ -1,0 +1,58 @@
+.color{
+    padding: 3rem 1rem 1rem;
+    border: 1px solid white
+}
+
+
+.primary-navigation{
+    list-style: none;
+    background-color: hsl(var(--white)/ 0.04);
+    justify-content: center;
+    --gap: 8em;
+}
+
+
+.primary-navigation a{
+    --underline: 2em;
+    display: block;
+    text-decoration: none;
+    color: hsl(var(--white));
+    
+}
+.primary-navigation span{
+    --underline: 0;
+    font-weight: 700;
+    margin-right: 1rem;
+}
+
+
+.tabs{
+    justify-content: center;
+    --gap: 2rem;
+    --underline: 1rem;
+}
+
+.tab-list{
+    text-decoration: none;
+}
+
+.dot-indicators{
+    justify-content: center;
+    margin-top: 15vh ;
+}
+
+.dot-indicators > *{
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: hsl(var(--white)/0.25);
+    transition-duration: 500ms ;
+}
+
+.dot-indicators > *:hover,
+.dot-indicators > *:focus{
+    background-color: hsl(var(--white)/0.5);
+}
+
+.dot-indicators > .active{
+    background-color: hsl(var(--white)/1);
+}

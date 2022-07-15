@@ -1,13 +1,367 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* --------------------------------------------------------------- */
+/* ---------------------------- Reset ---------------------------- */
+/* --------------------------------------------------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture,
+ul {
+    margin: 0;
+}
+
+/* set up the body */
+body {
+    font-family: var(--ff-serif);
+    font-size: var(--fs-400);
+    color: hsl(var(--white));
+    background-color: hsl(var(--dark) / var(--alphaBlue, 1));
+    line-height: 1.5;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-rows: min-content 1fr;
+
+    overflow-x: hidden;
+}
+
+/* make images easier to work with */
+img,
+picutre {
+    max-width: 100%;
+    display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p{
+    font-weight: 400;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.example::-webkit-scrollbar {
+    display: none;
+}
+  
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+/* --------------------------------------------------------------- */
+/* ---------------------- Custom Properties ---------------------- */
+/* --------------------------------------------------------------- */
+
+:root{
+/* ------- Colors ------ */
+    --dark: 230 35% 7% ;
+    --blue: 231 77% 90%;
+    --white: 0 0% 100% ;
+
+/* ----- Font Size ---- */
+    --fs-900: clamp(8rem, 10vw + 1rem, 9.375rem);
+    --fs-800: 3.5rem;
+    --fs-700: 2.5rem;
+    --fs-600: 2rem;
+    --fs-500: 1.5rem;
+    --fs-400: 1rem;
+    --fs-300: 1rem;
+    --fs-200: 0.875rem;
+
+/* --- Font Families -- */
+    --ff-serif: "Bellefair", serif;
+    --ff-sans-cond: "Barlow Condensed", sans-serif;
+    --ff-sans-normal: "Barlow", sans-serif;
+}
+
+
+@media (min-width: 35em) {
+    :root {
+        --fs-800: 4rem;
+        --fs-700: 2.5rem;
+        --fs-600: 1.5rem;
+        --fs-400: 1rem;
+    }
+}
+
+@media (min-width: 45em) {
+    :root {
+        /* font-sizes */
+        --fs-800: 6.25rem;
+        --fs-700: 3.5rem;
+        --fs-600: 2rem;
+        --fs-500: 1.75rem;
+        --fs-400: 1.125rem;
+        --fs-300: 1rem;
+        --fs-200: 0.875rem;
+    }
+}
+
+/* --------------------------------------------------------------- */
+/* ----------------------- Utility Classes ----------------------- */
+/* --------------------------------------------------------------- */
+
+/*
+gap: var(--gap, 1rem);
+it says that if the variable --gap is undefined for a paticular block 
+then just use the default value that is 1rem.
+*/
+
+
+.flex{
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid{
+    display: grid;
+    gap: var(--gap, 1rem)
+}
+
+.container {
+    padding: 0 2em; /* or padding-inline: 2em ;*/
+    margin: 0 auto; /* or margin-inline: auto ;*/
+    max-width: 80rem;
+}
+
+
+/* 
+This property is only for screen readers: 
+For Visually impared people as they mostly 
+use screen readers.
+Lets say if you don't have anything inside 
+the button so if an sr reader goes through
+it that won't say anything for that reason
+we use sr-only class that hides the text
+but the screen reader will read it.
+*/
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /* added line */
+    border: 0;
+}
+
+
+
+        /* ----------------------------------------- */
+        /* ----------------- Colors ---------------- */
+        /* ----------------------------------------- */
+
+.bg-dark{
+    background-color: hsl(var(--dark) / var(--alphaBlack, 1));
+}
+
+.bg-accent{
+    background-color: hsl(var(--blue) / var(--alphaBlue, 1));
+}
+
+.bg-white{
+    background-color: hsl(var(--white) / var(--alphaWhite, 1));
+}
+
+.text-dark{
+    color: hsl(var(--dark) / var(--alphaBlack, 1));
+}
+
+.text-accent{
+    color: hsl(var(--blue) / var(--alphaBlue, 1));
+}
+
+.text-white{
+    color: hsl(var(--white) / var(--alphaWhite, 1));
+}
+
+
+        /* ----------------------------------------- */
+        /* --------------- Typography -------------- */
+        /* ----------------------------------------- */
+
+
+.upperCase{
+    text-transform: uppercase;
+}
+
+
+.ff-serif{font-family: var(--ff-serif)}
+.ff-san-cond{font-family: var(--ff-sans-cond)}
+.ff-san-normal{font-family: var(--ff-sans-normal)}
+
+
+.letter-spacing-1 { letter-spacing: 4.75px; } 
+.letter-spacing-2 { letter-spacing: 2.7px; } 
+.letter-spacing-3 { letter-spacing: 2.35px; } 
+
+
+.fs-900{font-size: var(--fs-900);}
+.fs-800{font-size: var(--fs-800);}
+.fs-700{font-size: var(--fs-700);}
+.fs-600{font-size: var(--fs-600);}
+.fs-500{font-size: var(--fs-500);}
+.fs-400{font-size: var(--fs-400);}
+.fs-300{font-size: var(--fs-300);}
+.fs-200{font-size: var(--fs-200);}
+
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+    line-height: 1.1;
+}
+
+
+.numbered-title {
+    font-family: var(--ff-sans-cond);
+    font-size: var(--fs-500);
+    text-transform: uppercase;
+    letter-spacing: 4.72px; 
+}
+
+
+.numbered-title span {
+    margin-right: .5em;
+    font-weight: 700;
+    color: hsl(var(--blue)/ 0.25)
+}
+
+
+.flow > *:where(:not(:first-child)){
+    margin-top: var(--flow-space, 4rem);
+}
+
+
+
+/* --------------------------------------------------------------- */
+/* ------------------------- Components -------------------------- */
+/* --------------------------------------------------------------- */
+
+.center{
+    height: 100%;
+}
+
+.large-button{
+    font-size: 2rem;
+    display: inline-grid; 
+    
+    /* display grid so that we can take advantage of
+    align content to the center */
+    position: relative;
+    align-content: center;
+    margin-inline: auto;
+    text-decoration: none;
+    padding: 0 2em;
+    text-align: center;
+    aspect-ratio: 1 / 1;
+    max-width: 20rem;
+    max-height: 20rem;
+    border-radius: 50%;
+}
+
+.large-button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: hsl( var(--white) / .15);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 500ms ease-in, transform 500ms ease-out;
+    transition-property: transform, opacity;
+}
+
+.large-button:hover::after,
+.large-button:focus::after {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+.linear-indicators > *{
+    padding: var(--underline, 2em) 0;
+    border-bottom: hsl(var(--white)/ 0) solid 0.2rem;
+    transition-duration: 500ms ;
+}
+
+.linear-indicators > *:hover,
+.linear-indicators > *:focus {
+    border-color: hsl(var(--white)/ 0.5);
+}
+
+.linear-indicators > .active{
+    border-color: hsl(var(--blue)/ 1);
+}
+
+.flexGrow{
+    flex-grow: 1;
+}
+
+.marginTop{
+    margin-top: 2em;
+}
+
+.flexBox{
+    flex-basis: 100%;
+    padding: 1em 0;
+}
+
+.skip{
+    position: absolute;
+    background-color: hsl(var(--blue));
+    padding: 0.3em;
+    text-decoration: none;
+    color: hsl(var(--dark));
+    border-radius: 10px;
+    transform: translateY(-200%);
+    transition: transform 250ms ease-in;
+}
+
+.skip:focus{
+    transform: translateY(0%);
 }

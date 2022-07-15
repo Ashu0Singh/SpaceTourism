@@ -1,0 +1,45 @@
+.grid-container {
+    text-align: center;
+    gap: 2rem;
+    display: grid;
+    place-content: center;
+    place-items: center;
+}
+.grid-container > *:first-child{
+    max-width: 50ch;
+}
+@media (min-width: 45rem) {
+    .grid-container {text-align: start;
+        grid-template-columns: minmax(2rem, 1fr) minmax(0, 30rem) 1fr minmax(0, 30rem) minmax(2rem, 1fr);
+    }
+    .grid-container > *:first-child{
+        grid-column: 2;
+    }
+
+    .grid-container > *:last-child{
+        grid-column: 4;
+    }
+}
+
+.d-block{
+    display: block;
+}
+
+.home{
+    background-position:bottom;
+    background-size: cover;
+    background-image: url('../../assets/home/background-home-mobile.jpg');
+}
+
+@media (min-width: 30rem) {
+    .home{
+        background-image: url('../../assets/home/background-home-tablet.jpg');
+    }
+}
+
+@media (min-width: 45rem) {
+    .home{
+        background-position:right;
+        background-image: url('../../assets/home/background-home-desktop.jpg');
+    }
+}
