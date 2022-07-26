@@ -5,7 +5,7 @@ export default function LandingPage(){
     return (
         <body className="home">
            <a className="skip ff-san-normal fs-400" href="#main">Skip to Content</a>
-           <NavBar />
+           <NavBar activeClass = {["active","","",""]}/>
            <main id="main" className="grid-container">
                 <div className="flexBox">
                     <h1 className="text-accent ff-san-cond fs-500 upperCase letter-spacing-1">So, you want to travel to<br />

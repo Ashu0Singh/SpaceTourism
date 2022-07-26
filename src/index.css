@@ -100,7 +100,7 @@ p{
     --white: 0 0% 100% ;
 
 /* ----- Font Size ---- */
-    --fs-900: clamp(8rem, 10vw + 1rem, 9.375rem);
+    --fs-900: clamp(7rem, 10vw + 1rem, 9.375rem);
     --fs-800: 3.5rem;
     --fs-700: 2.5rem;
     --fs-600: 2rem;

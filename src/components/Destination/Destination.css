@@ -1,6 +1,7 @@
 .destination{
     background-position:top;
     background-size: cover;
+    --flow-space: 2rem;
     background-image: url('../../assets/destination/background-destination-mobile.jpg');
 }
 
@@ -23,8 +24,7 @@
 .grid-nav{
     --underline: 1rem;
     list-style: none;
-    --gap: 2em;
-    padding-inline: 0;
+    --gap: 3.3em;
 }
 
 .grid-nav >li > a{
@@ -32,6 +32,12 @@
     color: hsl(var(--white))
 }
 
+@media (min-width: 35rem){
+    .grid-nav{
+        padding-inline: 0;
+        --gap: 2em;
+    } 
+}
 .data{
-    --flow-space: 2rem;
+    --flow-space: 1rem;
 }
