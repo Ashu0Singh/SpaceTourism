@@ -40,10 +40,10 @@ export default function Destination(){
                     <div className='data flow'>
                         <nav>
                             <ul className="grid-nav linear-indicators flex fs-300 letter-spacing-2 ff-san-cond text-white upperCase ">
-                                <li className={className[0]}><Link to="/destination/mars">Mars</Link></li>
-                                <li className={className[1]}><Link to="/destination/moon">Moon</Link></li>
-                                <li className={className[2]}><Link to="/destination/europa">Europa</Link></li>
-                                <li className={className[3]}><Link to="/destination/titan">Titan</Link></li>
+                                <li className={className[0]}><Link to="/SpaceTourism/destination/mars">Mars</Link></li>
+                                <li className={className[1]}><Link to="/SpaceTourism/destination/moon">Moon</Link></li>
+                                <li className={className[2]}><Link to="/SpaceTourism/destination/europa">Europa</Link></li>
+                                <li className={className[3]}><Link to="/SpaceTourism/destination/titan">Titan</Link></li>
                             </ul>
                         </nav>
                         <p className='ff-serif fs-900 upperCase'>{destination.name}</p>
