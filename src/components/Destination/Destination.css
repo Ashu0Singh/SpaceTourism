@@ -19,12 +19,13 @@
 }
 
 .grid-container > *{
+    width: 100%;
     align-items: center;
 }
 .grid-nav{
     --underline: 1rem;
     list-style: none;
-    --gap: 3.3em;
+    --gap: 2em;
 }
 
 .grid-nav >li > a{
@@ -35,7 +36,6 @@
 @media (min-width: 35rem){
     .grid-nav{
         padding-inline: 0;
-        --gap: 2em;
     } 
 }
 .data{
