@@ -20,24 +20,40 @@
 
 .grid-container > *{
     width: 100%;
-    align-items: center;
+    
 }
 .grid-nav{
+    justify-content: center;
     --underline: 1rem;
     list-style: none;
     --gap: 2em;
+    padding: 0;
 }
-
 .grid-nav >li > a{
     text-decoration: none;
-    color: hsl(var(--white))
+    color: hsl(var(--white));
+    
 }
 
-@media (min-width: 35rem){
+@media (min-width: 45rem){
     .grid-nav{
-        padding-inline: 0;
+        justify-content: flex-start;
     } 
 }
 .data{
     --flow-space: 1rem;
+}
+.main-content > div > div{
+    flex-direction: column;
+    border-top:hsl(var(--white)/0.2) solid 0.01rem;
+    margin-top: 2rem;
+    padding: 1rem;
+    --gap: 0rem;
+}
+
+@media (min-width: 58rem){
+    .main-content > div > div{
+        --gap: 2rem;
+        flex-direction: row;
+    }
 }
