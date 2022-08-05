@@ -28,10 +28,10 @@ export default function NavBar({activeClass}){
             <button className="Navbar-toggle" style={isOpen? {backgroundImage: `url(${cross})`}:{}} onClick={hamburgerMenu}><span className="sr-only">Menu</span></button>
             <nav>
                 <ul style={style} className="primary-navigation linear-indicators flex fs-300 letter-spacing-2 ff-san-cond text-white upperCase ">
-                    <li className={activeClass[0]}><Link to="/SpaceTourism/"><span>00</span>Home</Link></li>
-                    <li className={activeClass[1]}><Link to="/SpaceTourism/destination/mars"><span>01</span>Destination</Link></li>
-                    <li className={activeClass[2]}><Link to="/SpaceTourism/crew"><span>02</span>Crew</Link></li>
-                    <li className={activeClass[3]}><Link to="/SpaceTourism/tech"><span>03</span>Technology</Link></li>
+                    <li className={activeClass[0]}><a href="/SpaceTourism/"><span>00</span>Home</a></li>
+                    <li className={activeClass[1]}><a href="/SpaceTourism/destination/mars"><span>01</span>Destination</a></li>
+                    <li className={activeClass[2]}><a href="/SpaceTourism/crew"><span>02</span>Crew</a></li>
+                    <li className={activeClass[3]}><a href="/SpaceTourism/tech"><span>03</span>Technology</a></li>
                 </ul>
             </nav>
         </div>

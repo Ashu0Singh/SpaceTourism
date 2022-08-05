@@ -7,10 +7,6 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element= {<Homepage />} />
-        <Route path="/destination/:name" element= {<Destination />} />
-        <Route path="/crew" element= {<Homepage />} />
-        <Route path="/tech" element= {<Homepage />} />
         <Route path="/SpaceTourism/" element= {<Homepage />} />
         <Route path="/SpaceTourism/destination/:name" element= {<Destination />} />
         <Route path="/SpaceTourism/crew" element= {<Homepage />} />
