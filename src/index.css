@@ -241,6 +241,8 @@ but the screen reader will read it.
 .letter-spacing-2 { letter-spacing: 2.7px; } 
 .letter-spacing-3 { letter-spacing: 2.35px; } 
 
+.line-height-1 { line-height: 6rem; margin: 0.5rem 0; }
+.line-height-2 { line-height: 2rem; margin: 1.5rem 0; }
 
 .fs-900{font-size: var(--fs-900);}
 .fs-800{font-size: var(--fs-800);}
@@ -345,7 +347,7 @@ but the screen reader will read it.
 }
 
 .marginTop{
-    margin-top: 2em;
+    margin-top: var(--marginTop, 2em);
 }
 
 .flexBox{
@@ -366,4 +368,32 @@ but the screen reader will read it.
 
 .skip:focus{
     transform: translateY(0%);
+}
+
+.dot-indicators{
+    margin-top: 15vh ;
+    --gap: 1.2rem;
+}
+
+.dot-indicators > *{
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: none;
+    background-color: hsl(var(--white)/0.25);
+    transition-duration: 500ms ;
+}
+
+.dot-indicators > *:hover,
+.dot-indicators > *:focus{
+    background-color: hsl(var(--white)/0.5);
+}
+
+.dot-indicators > .active{
+    background-color: hsl(var(--white)/1);
+}
+
+@media (max-width: 45rem){
+    .dot-indicators{
+        justify-content: center;
+    }
 }

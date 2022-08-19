@@ -3,7 +3,6 @@ import './Navigation.css'
 import logo from '../../assets/shared/logo.svg'
 import cross from '../../assets/shared/icon-close.svg'
 import { Link } from 'react-router-dom'
-
 export default function NavBar({activeClass}){
     const [isOpen , setIsOpen] = React.useState(false);
     const [style , setStyle] = React.useState({});

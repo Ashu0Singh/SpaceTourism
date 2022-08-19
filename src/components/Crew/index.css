@@ -1,0 +1,74 @@
+body{ 
+    background-size: cover;
+    background-position: left;
+    background-image: url(../../assets/crew/background-crew-mobile.jpg);
+}
+
+@media(min-width: 35rem){
+    body{
+        background-image: url(../../assets/crew/background-crew-tablet.jpg);
+    }
+}
+
+@media(min-width: 45rem){
+    body{
+        background-image: url(../../assets/crew/background-crew-desktop.jpg);
+    }
+}
+
+.crewMain{
+    display: flex;
+    --gap: 2rem;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
+.crewMain > *:last-child{
+    border-bottom: 2px hsl(var(--white)/ 0.5) solid;
+}
+@media(min-width: 35rem){
+    .crewMain{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .crewMain > *:last-child{
+        border-bottom: none;
+    }
+}
+
+.details{
+    flex-direction: column-reverse;
+    justify-content: center;
+}
+
+@media (min-width: 35rem){
+    .details{
+        flex-direction: column;
+        width: 87%;
+    }
+}
+
+.outline{
+    outline: red 2px solid;
+}
+
+.position{
+    --marginTop: 6rem;
+    color: hsl(var(--white)/ 0.5);
+}
+
+
+
+
+@media (min-width: 45rem ){
+    .image{
+        margin-top: 2rem;
+        margin-inline: auto;
+        width: 100%;
+    }
+}
+
+
+.paragraph{
+    width: clamp(30rem , 20vw + 5rem , 40rem);
+    color: hsl(var(--blue)/ 0.9);
+}
