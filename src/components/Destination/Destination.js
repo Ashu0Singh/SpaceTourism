@@ -27,8 +27,6 @@ export default function Destination(){
         className = ["","","","active"];
         destination = Data.destinations[3];
     }
-
-    console.log(process.env.PUBLIC_URL+(JSON.stringify( destination.images.png)))
     return(
         <div className="destination">
             <a className="skip ff-san-normal fs-400" href="#main">Skip to Content</a>
