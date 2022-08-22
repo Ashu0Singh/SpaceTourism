@@ -104,10 +104,10 @@ body{
 /* ----- Font Size ---- */
     --fs-900: clamp(5rem, 10vw + 1rem, 9.375rem);
     --fs-800: 3.5rem;
-    --fs-700: 2.5rem;
+    --fs-700: clamp(1.8rem, 1vw + 0.1rem, 3rem);
     --fs-600: 2rem;
     --fs-500: 1.5rem;
-    --fs-400: 1rem;
+    --fs-400: 1.1rem;
     --fs-300: 1rem;
     --fs-200: 0.875rem;
 

@@ -25,20 +25,20 @@
     display: block;
 }
 
-.home{
+body{
     background-position:bottom;
     background-size: cover;
     background-image: url('../../assets/home/background-home-mobile.jpg');
 }
 
 @media (min-width: 30rem) {
-    .home{
+    body{
         background-image: url('../../assets/home/background-home-tablet.jpg');
     }
 }
 
 @media (min-width: 45rem) {
-    .home{
+    body{
         background-position:right;
         background-image: url('../../assets/home/background-home-desktop.jpg');
     }

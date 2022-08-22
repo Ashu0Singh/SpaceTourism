@@ -13,6 +13,7 @@ body{
 @media(min-width: 45rem){
     body{
         background-image: url(../../assets/crew/background-crew-desktop.jpg);
+        overflow: hidden;
     }
 }
 
@@ -38,43 +39,91 @@ body{
     text-align: center;
 }
 
-.grid-container-crew > .positions{
+.grid-container-crew article > .positions{
+    color: hsl(var(--blue)/ 0.5);
 }
 
-.grid-container-crew > p{
+.grid-container-crew article > p{
+    padding-inline: 5% ;
+    color: hsl(var(--blue)/ 0.9);
 }
 
 .grid-container-crew > .indicators{
     grid-area: dotIndicator;
-    background-color: aqua;
-    margin: 0;
-    
+    margin: 1.5rem auto;
 }
 
 .grid-container-crew > img{
     grid-area: image;
-    width: 50%;
-    margin-inline:auto ;
-    background-color: aqua;
+    padding-inline: 25%;
+    margin-inline: auto ;
+    border-bottom: hsl(var(--blue)/ 0.2) 2px solid ;
 }
 
 @media(min-width: 35rem){
+    .grid-container-crew{
+        grid-template-areas: 
+        '. header .'
+        '. crewData .'
+        '. dotIndicator .'
+        '. image .';
+    }
+    .grid-container-crew > .indicators{
+        transform: scale(0.8);
+    }
+    .grid-container-crew article > p{
+        padding-inline: 10%;
+        line-height: 1.5rem;
+    }
+    .grid-container-crew > .numbered-title{
+        text-align: start;
+        font-size: 1.2rem;
+    }
 }
-
-@media (min-width: 35rem){
-}
-
-.outline{
-    outline: red 2px solid;
-}
-
-
 
 @media (min-width: 45rem ){
-}
-
-
-.paragraph{
-    width: clamp(30rem , 20vw + 5rem , 40rem);
-    color: hsl(var(--blue)/ 0.9);
+    .grid-container-crew{
+        height: 78vh;
+        margin-top: 4rem;
+        --gap: 4rem;
+        grid-template-columns: 8% 40% 1fr 40% 8%;
+        grid-template-rows: auto auto auto auto auto ;
+        grid-template-areas: 
+        '. header . . .'
+        '. . . image .'
+        '. crewData . image .'
+        '. . . image .'
+        '. dotIndicator . image .';
+    }
+    .grid-container-crew > .numbered-title{
+        font-size: clamp(1.5rem ,2.5vw, 1.8rem);;
+    }
+    
+    .grid-container-crew > article{
+        text-align: start;
+    }
+    
+    .grid-container-crew article > p{
+        padding-inline: 0;
+        font-size: clamp(1.1rem ,1vw, 1.8rem) ;
+        padding-right: clamp(0rem ,7vw, 10rem) ;
+        line-height: clamp(1.5rem ,3vw, 2rem) ;
+    }
+    
+    .grid-container-crew > .indicators{
+        margin: 2rem 0 0 0;
+        align-items: flex-start;
+        transform: scale(1);
+        margin-bottom: 5rem;
+    }
+    
+    .grid-container-crew > img{
+        --gap: 4rem;
+        border: none;
+        padding-inline: clamp(56px ,7.7vw, 118px );
+        align-self: flex-end;
+    }
+    .grid-container-crew > article > h1{
+        font-size: clamp(2.5rem ,3.6vw, 5rem);
+    }
 }

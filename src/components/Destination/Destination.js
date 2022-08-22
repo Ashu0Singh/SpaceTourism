@@ -27,6 +27,11 @@ export default function Destination(){
         className = ["","","","active"];
         destination = Data.destinations[3];
     }
+    else
+    {
+        className = ["active","","",""];
+        destination = Data.destinations[1];
+    }
     return(
         <div className="destination">
             <a className="skip ff-san-normal fs-400" href="#main">Skip to Content</a>
