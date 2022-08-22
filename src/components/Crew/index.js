@@ -49,10 +49,10 @@ export default function Crew(){
                 </article>
                 
                 <div className="dot-indicators indicators flex">
-                            <Link to="/crew/Douglas" className={className[0]}></Link>
-                            <Link to="/crew/Mark" className={className[1]} ></Link>
-                            <Link to="/crew/Victor" className={className[2]}></Link>
-                            <Link to="/crew/Anousheh" className={className[3]}></Link>
+                            <Link to="/SpaceTourism/crew/Douglas" className={className[0]}></Link>
+                            <Link to="/SpaceTourism/crew/Mark" className={className[1]} ></Link>
+                            <Link to="/SpaceTourism/crew/Victor" className={className[2]}></Link>
+                            <Link to="/SpaceTourism/crew/Anousheh" className={className[3]}></Link>
                 </div>
                 <img src={process.env.PUBLIC_URL + crew.images.png} alt="CrewImage"></img>
             </main>
