@@ -1,5 +1,5 @@
 import React from "react";
-import './index.css'
+import './Crew.css'
 import NavBar from "../Navigation/Navigation";
 import Data from '../../data.json'
 import { Link, useParams } from "react-router-dom";

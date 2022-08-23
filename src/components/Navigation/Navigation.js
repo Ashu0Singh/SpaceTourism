@@ -30,7 +30,7 @@ export default function NavBar({activeClass}){
                     <li className={activeClass[0]}><Link to="/SpaceTourism/"><span>00</span>Home</Link></li>
                     <li className={activeClass[1]}><Link to="/SpaceTourism/destination"><span>01</span>Destination</Link></li>
                     <li className={activeClass[2]}><Link to="/SpaceTourism/crew"><span>02</span>Crew</Link></li>
-                    <li className={activeClass[3]}><Link to="/SpaceTourism/tech"><span>03</span>Technology</Link></li>
+                    <li className={activeClass[3]}><Link to="/SpaceTourism/technology"><span>03</span>Technology</Link></li>
                 </ul>
             </nav>
         </div>
