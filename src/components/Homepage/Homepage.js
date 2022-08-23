@@ -1,5 +1,6 @@
 import NavBar from "../Navigation/Navigation";
 import './Homepage.css'
+import {Link} from 'react-router-dom';
 
 export default function LandingPage(){
     return (
@@ -18,10 +19,10 @@ export default function LandingPage(){
                     </p>
                 </div>
                 <div className="flexBox flex ">
-                    <a className="large-button upperCase letter-spacing-3 ff-serif bg-white text-dark"
-                    href="/As">
+                    <Link className="large-button upperCase letter-spacing-3 ff-serif bg-white text-dark"
+                    to="/SpaceTourism/destination/">
                         Explore
-                    </a>
+                    </Link>
                 </div>
                 
             </main>

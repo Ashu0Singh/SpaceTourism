@@ -55,5 +55,6 @@
     .main-content > div > div{
         --gap: 2rem;
         flex-direction: row;
+        margin-bottom: 1.6rem;
     }
 }
