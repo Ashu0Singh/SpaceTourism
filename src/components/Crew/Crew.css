@@ -1,4 +1,4 @@
-.crew{ 
+body{ 
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
@@ -6,13 +6,13 @@
 }
 
 @media(min-width: 35rem){
-    .crew{
+    body{
         background-image: url(../../assets/crew/background-crew-tablet.jpg);
     }
 }
 
 @media(min-width: 45rem){
-    .crew{
+    body{
         background-image: url(../../assets/crew/background-crew-desktop.jpg);
         overflow: hidden;
     }

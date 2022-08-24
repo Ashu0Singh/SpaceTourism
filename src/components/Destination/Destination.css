@@ -1,4 +1,4 @@
-.destination{
+body{
     background-position:top;
     background-size: cover;
     --flow-space: 2rem;
@@ -6,13 +6,13 @@
 }
 
 @media (min-width: 30rem) {
-    .destination{
+    body{
         background-image: url('../../assets/destination/background-destination-tablet.jpg');
     }
 }
 
 @media (min-width: 45rem) {
-    .destination{
+    body{
         background-position:right;
         background-image: url('../../assets/destination/background-destination-desktop.jpg');
     }

@@ -1,4 +1,4 @@
-.technology{
+body{
     background-position:top;
     background-size: cover;
     --flow-space: 2rem;
@@ -6,13 +6,13 @@
 }
 
 @media (min-width: 30rem) {
-    .technology{
+    body{
         background-image: url('../../assets/technology//background-technology-tablet.jpg');
     }
 }
 
 @media (min-width: 45rem) {
-    .technology{
+    body{
         background-position:right;
         background-image: url('../../assets/technology//background-technology-desktop.jpg');
     }
