@@ -1,5 +1,5 @@
 # Space Tourism 
 
-[www.ashu-singh.me/SpaceTourism]
+www.ashu-singh.me/SpaceTourism
 
 - by Ashutosh Singh
