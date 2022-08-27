@@ -1,6 +1,9 @@
 {
   "name": "spacetourism",
   "homepage": "https://Ashu0Singh.github.io/SpaceTourism/",
+  "crewpage": "https://Ashu0Singh.github.io/SpaceTourism/crew",
+  "destinaiton": "https://Ashu0Singh.github.io/SpaceTourism/destination",
+  "techpage": "https://Ashu0Singh.github.io/SpaceTourism/technology",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
