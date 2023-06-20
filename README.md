@@ -1,8 +1,8 @@
 # Space Tourism
 
 Welcome to the Space Tourism project! This is a CSS-intensive project that showcases the potential of modern web design techniques. The project is fully responsive, ensuring a seamless experience across different devices.
-
-![Project Screenshot](url-to-your-project-screenshot)
+www.ashu-singh.me/SpaceTourism/
+![Project Screenshot](https://raw.githubusercontent.com/Ashu0Singh/SpaceTourism/master/SpaceTourism.png)
 
 ## Table of Contents
 
